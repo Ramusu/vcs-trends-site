@@ -70,39 +70,27 @@ modern DevOps workflows, enabling everything from open-source projects with thou
 contributors to automated infrastructure management via GitOps.
 </l>
 </ul>
-<h>Centralized vs. Distributed Version Control</h>
+<h1>Centralized vs. Distributed Version Control</h1>
 <p>
-Centralized Version Control (CVCS): A single central repository on a server holds the “official”
-copy of the code. Developers commit changes to this server and update (pull) changes from it.
-Tools like RCS, CVS, and Subversion are centralized. In a CVCS, collaboration requires network
-access to the server – if the server is down, nobody can commit changes. This model provides a
-single source of truth and is straightforward to understand: everyone works on the same central
-codebase . However, it creates a single point of failure (if the central repo is lost or
-offline, work halts) . Collaboration is linear; merging changes from multiple developers can
-be challenging, so teams often avoided creating too many branches in the past.
+Traditional centralized systems (CVS, SVN) rely on a single central server that stores the “official” version of code. Developers must be connected to commit or update, and if the server goes offline, development halts. Collaboration is linear—branches exist, but they’re cumbersome to create, manage, and merge.
 
 </p>
 <p>
-Distributed Version Control (DVCS): In distributed systems like Git or Mercurial, every developer
-has their own full copy of the repository, including the entire history . There is no inherent
-single master server – every clone can serve as a remote for others. Developers can commit
-changes locally to their own repository (even offline), and later push those changes to share with
-others or pull updates from peers. This offers greater flexibility: work can continue even if no
-central server is accessible, and there’s redundancy (every clone is a backup of the project).
-Merging is a first-class operation in DVCS, enabling prolific branching and non-linear
-development workflows. Teams can still designate a “central” repository by convention (for
-example, a main project repo on GitHub) – but the tools don’t enforce a single point of authority,
-it’s a social/project choice.
+Distributed Version Control Systems (DVCS)—such as Git and Mercurial—revolutionized this model:
 
 </p>
+<ul>
+    <l>Complete Local Repositories: Every developer has a full copy of the entire project history. This eliminates single points of failure and allows full offline work.</l>
+    <l>Local Commits: Developers can commit changes, revert, and inspect history locally without any network access.</l>
+    <l>Fast Branching and Merging: DVCS made branching and merging lightweight operations. Developers can freely create feature branches, experiment, and merge later.</l>
+    <l>Parallel and Nonlinear Development: Teams can work in parallel across branches and later merge contributions seamlessly. This encourages experimentation and reduces integration pain.</l>
+    <l>Resilience and Flexibility: Because every clone is a full backup, data loss is nearly impossible. Teams can also organize around different collaboration models (central hub or peer-to-peer sharing).</l>
+</ul>
 <p>
-In summary: Centralized systems are simple and good for a single source of truth, but suffer from
-single-point failures and require connectivity for most operations. Distributed systems add complexity
-in exchange for greater flexibility, offline work, and resilience – these have become dominant in modern
-development.
+This shift to distributed workflows made global collaboration (e.g., the Linux kernel’s thousands of contributors) feasible. It also paved the way for modern DevOps pipelines, where code, infrastructure, and automation all revolve around Git repositories.
 </p>
 
-<h2>Navigation</h2>
+<h3>Navigation</h3>
 <p>
 <a href="index.html">Overview of Version Control Systems</a>
 </p>
@@ -111,6 +99,9 @@ development.
 <a href="trends.html">Modern Trends regarding Version Control Systems</a>
 </p>
 
+<h6>Reference:
+History and Modern Trends in Version Control Systems.</h6>
+<h6>Summary prepared with ChatGPT</h6>
 
 </body>
 
